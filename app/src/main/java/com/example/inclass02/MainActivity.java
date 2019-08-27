@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText et_length1;
     private EditText et_length2;
     private String selectedShape;
+    float length1;
+    float length2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,9 +42,6 @@ public class MainActivity extends AppCompatActivity {
         iv_circle = findViewById(R.id.iv_circle);
 
         clearButton();
-
-        final float length1;
-        final float length2;
 
         String tempLength1 = et_length1.getText().toString();
         String tempLength2 = et_length2.getText().toString();
@@ -86,8 +85,8 @@ public class MainActivity extends AppCompatActivity {
 
 
                 switch(selectedShape) {
-                    case "triangle";
-                    float result = (float) (0.5 * length1 * length2);   //TODO: FIX AS DOUBLE
+                    case "triangle":
+                    float result = (float) 0.5 * length1 * length2;
                     tv_result.setText(result+"");
                 }
             }
